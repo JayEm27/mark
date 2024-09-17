@@ -1,0 +1,98 @@
+/* Basic styling for the body */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Styling for the calculator container */
+.calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    width: 250px;
+}
+
+/* Styling for the result input */
+input[type="text"] {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Styling for the buttons container */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* Styling for each button */
+.buttons button {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Hover effect for buttons */
+.buttons button:hover {
+    background-color: #d0d0d0;
+}
+
+/* Active effect for buttons */
+.buttons button:active {
+    background-color: #c0c0c0;
+    transform: scale(0.98);
+}
+
+/* Special button styling for operators and clear */
+.buttons button[value="+"] {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.buttons button[value="-"] {
+    background-color: #ff3b30;
+    color: #fff;
+}
+
+.buttons button[value="*"] {
+    background-color: #ffcc00;
+    color: #fff;
+}
+
+.buttons button[value="/"] {
+    background-color: #007aff;
+    color: #fff;
+}
+
+.buttons button[value="C"] {
+    background-color: #ff3b30;
+    color: #fff;
+}
+
+.buttons button[value="="] {
+    background-color: #34c759;
+    color: #fff;
+    grid-column: span 4; /* Makes the "=" button span the entire width */
+}
